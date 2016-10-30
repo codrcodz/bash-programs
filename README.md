@@ -1,2 +1,2 @@
 # programs-bash
-This repository hosts programs written in pure bash.
+This repository hosts programs written in pure bash. As a system administrator, I love functional/procedural programming and scripting. While bash is commonly known as a shell, it is also a Turing complete programming language. I have made my way through the entire Advanced Bash Scripting guide on tldp.org, and challenge myself to fully use all bash builtins before piping to external binaries whenever possible.
