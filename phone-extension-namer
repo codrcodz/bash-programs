@@ -44,7 +44,7 @@ for digit in ${position_[*]}
 # The "ltr_stack" variable is carved into pieces and the letters are printed in sets of four as the loop iterates.
 # The "i0" - "i4" arrays isolate and store each letter set from each of the four digits, eliminating the "/" delimiter.
 # The "d1" - "d4" arrays associated with each "i" variable are used to strip the ":" delimiters out of the letter sets.
-# For instance, after the stripping process, the values of the i0 array might be: i0[0]=a, i0[1]=b, i[0]=c, et cetera.
+# For instance, after the stripping process, the values of the i0 array might be: i0[0]=a, i0[1]=b, i0[2]=c, et cetera.
 # Once each letter set is assigned to an "i" array, the for loop iteriates over each array, printing a new letter each time.
 # So, on the first pass of this loop, you'll get the values of: i0[0], i1[0], i2[0], and i3[0], all mashed together (i.e. adgj).
 # On the second pass, you'd get the values of: i0[0], i1[0], i2[0], i3[1], aka "adgk" if our extension was "2345". 
