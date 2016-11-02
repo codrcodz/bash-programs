@@ -1,0 +1,10 @@
+language:
+  - bash
+
+before_script:
+  - sudo apt-get update
+  - sudo easy_install bashtest
+
+script:
+  - bashtest ./test/digit-test.bashtest
+  - bashtest ./test/alpha-test.bashtest
