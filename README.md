@@ -5,7 +5,7 @@ Ever wonder if the last four digits of your phone number spells a funny word or 
 Here is example usage:
 
 ```bash
-namer.sh 2345 | head
+$ ./namer.sh 2345 | head
 adgj
 adgk
 adgl
