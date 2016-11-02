@@ -1,5 +1,5 @@
 #!/bin/bash
-# Phone Extension Namer v2016.10.30.01
+# namer.sh v2016.10.30.01
 # Author: Cody Lee Cochran
 # Contributer(s): Chris Derichs
 # MIT License
