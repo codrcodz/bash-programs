@@ -1,8 +1,8 @@
 #!/bin/bash
-# namer.sh v2016.10.30.01
+# Program: namer.sh v2016.10.30.01
 # Author: Cody Lee Cochran
 # Contributer(s): Chris Derichs
-# MIT License
+# License: MIT License
 # Description: This is a toy program that makes use of some of the bash programming language's less known features.
 # When provided with your four digit phone extension, the program will return a list of all possible letter combinations.
 # Special thanks to Chris for helping me shrink down the case statement from 11 cases to just three.
