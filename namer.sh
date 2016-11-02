@@ -19,20 +19,20 @@ ltr_set_=( 0 1 a:b:c d:e:f g:h:i j:k:l m:n:o p:q:r:s t:u:v w:x:y:z )
 # In this loop, each number stored in the "position_" array is passed to a case evaluation.
 for digit in ${position_[*]}
 	do 
-    # The case eval looks at the digit and decides if it has cooresponding letters (0 & 1 do not).
-    # If the digit is 2-9, the associated letters are added to the "/" delimited "ltr_stack" variable.
+    		# The case eval looks at the digit and decides if it has cooresponding letters (0 & 1 do not).
+    		# If the digit is 2-9, the associated letters are added to the "/" delimited "ltr_stack" variable.
 		case $digit in
-				[0-1])
-					echo "Extension character $digit invalid; exiting."
-					exit 1
-					;;
-				[2-9]) 
-					ltr_stack+="${ltr_set_[$digit]}/"
-					;;
-				*)
-					echo "Extension character $digit invalid; exiting."
-					exit 1
-					;;
+			[0-1])
+				echo "Extension character $digit invalid; exiting."
+				exit 1
+				;;
+			[2-9]) 
+				ltr_stack+="${ltr_set_[$digit]}/"
+				;;
+			*)
+				echo "Extension character $digit invalid; exiting."
+				exit 1
+				;;
 		esac
 	done
 
@@ -50,14 +50,14 @@ for digit in ${position_[*]}
 # On the second pass, you'd get the values of: i0[0], i1[0], i2[0], i3[1], aka "adgk" if our extension was "2345". 
 # Eventually, every possible combination of letters translated from the four provided digits is printed in sets of four.
 for i0 in $(IFS=/; echo "${ltr_stack}" | while read d{1..4}; do printf "${d1//:/\n}\n"; done; unset IFS)
-		do for i1 in $(IFS=/; echo "${ltr_stack}" | while read d{1..4}; do printf "${d2//:/\n}\n"; done; unset IFS)
-			 do for i2 in $(IFS=/; echo "${ltr_stack}" | while read d{1..4}; do printf "${d3//:/\n}\n"; done; unset IFS)
-		 		do for i3 in $(IFS=/; echo "${ltr_stack}" | while read d{1..4}; do printf "${d4//:/\n}\n"; done; unset IFS)
-		 			do printf "${i0}${i1}${i2}${i3}\n"
-					done
+	do for i1 in $(IFS=/; echo "${ltr_stack}" | while read d{1..4}; do printf "${d2//:/\n}\n"; done; unset IFS)
+		 do for i2 in $(IFS=/; echo "${ltr_stack}" | while read d{1..4}; do printf "${d3//:/\n}\n"; done; unset IFS)
+	 		do for i3 in $(IFS=/; echo "${ltr_stack}" | while read d{1..4}; do printf "${d4//:/\n}\n"; done; unset IFS)
+	 			do printf "${i0}${i1}${i2}${i3}\n"
 				done
 			done
 		done
+	done
 
 # Lastly, we cleanup after ourselves by unsetting everything in case we run the script again from the same env.
 unset extension
