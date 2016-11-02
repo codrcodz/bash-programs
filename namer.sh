@@ -5,7 +5,7 @@
 # License: MIT License
 # Description: This is a toy program that makes use of some of the bash programming language's less known features.
 # When provided with your four digit phone extension, the program will return a list of all possible letter combinations.
-# Special thanks to Chris for helping me shrink down the case statement from 11 cases to just three.
+# Special thanks to Chris for helping me shrink down the case statement.
 
 # The program takes your four digit phone extension as an argument in the $1 position when invoked from the command line.
 extension=$1
