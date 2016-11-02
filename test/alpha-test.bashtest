@@ -1,1 +1,2 @@
-Extension character "a" invalid; exiting.
+$ namer.sh abcd
+Extension character a invalid; exiting.
