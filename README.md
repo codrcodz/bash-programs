@@ -1,5 +1,5 @@
 # Number Namer
-[![Build Status](https://travis-ci.org/codrcodz/phone-extension-namer.svg?branch=master)](https://travis-ci.org/codrcodz/number-namer)
+[![Build Status](https://travis-ci.org/codrcodz/number-namer.svg?branch=master)](https://travis-ci.org/codrcodz/number-namer)
 [![GitHub version](https://badge.fury.io/gh/codrcodz%2Fnumber-namer.svg)](https://badge.fury.io/gh/codrcodz%2Fnumber-namer)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/codrcodz/number-namer/master/LICENSE)
 
