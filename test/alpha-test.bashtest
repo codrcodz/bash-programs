@@ -1,2 +1,2 @@
 $ ./namer.bash abcd
-Extension character a invalid; exiting.
+Invalid Input; enter the last four digits of your phone number.
