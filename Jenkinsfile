@@ -15,7 +15,7 @@ pipeline {
             steps {
                 // Make program executable by jenkins user.
                 echo "Preparing test environment..."
-                sh "chmod u+x ./namer.sh"
+                sh "chmod u+x ./namer.bash"
                 
                 // Test program's ability to parse CLI options and return expected results.
                 echo "Testing.."
