@@ -20,6 +20,25 @@ position_=( ${extension:0:1} ${extension:1:1} ${extension:2:1} ${extension:3:1} 
 # The digit-to-character translation is performed with an array called "ltr_set_"
 ltr_set_=( 0 1 a:b:c d:e:f g:h:i j:k:l m:n:o p:q:r:s t:u:v w:x:y:z )
 
+for digit in ${position_[*]}
+	do 
+    	# The case eval looks at the digit and decides if it has cooresponding letters (0 & 1 do not).
+   	# If the digit is 2-9, the associated letters are added to the "/" delimited "ltr_stack" variable.
+		case $digit in
+			[0-1])
+				echo "Extension character $digit invalid; exiting."
+				exit 1
+				;;
+			[2-9]) 
+				ltr_stack+="${ltr_set_[$digit]}/"
+				;;
+			*)
+				echo "Extension character $digit invalid; exiting."
+				exit 1
+				;;
+		esac
+	done
+
 # Now the "ltr_stack" variable will have a list of letters delimited by ":" and "/" symbols
 # For example: 2345 would be stored as: a:b:c/d:e:f/g:h:i/j:k:l
 # The series of nested loops below manipulates the "Interfield Seperator (IFS)" reserved variable in Bash.
