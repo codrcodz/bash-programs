@@ -21,7 +21,7 @@ pipeline {
             steps {
 
                 echo "Preparing test environment..."
-                sh "chmod u+x ./namer.sh
+                sh "chmod u+x ./namer.sh"
                 sh "which bashtest || easy_install bashtest"
                 sh "which bashtest || echo "$PATH" && exit 1"
 
