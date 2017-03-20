@@ -1,5 +1,5 @@
 #!/bin/bash
-# Program: namer.sh
+# Program: namer.bash
 # Author: Cody Lee Cochran
 # Contributer(s): Chris Derichs
 # License: MIT License
