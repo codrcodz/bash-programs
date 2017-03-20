@@ -2,7 +2,7 @@
 pipeline {
 
     // No agent needed. Running directly on Jenkins master node.
-    agent none
+    agent any
     
     stages {
         // No build needed. Executing from source code.
