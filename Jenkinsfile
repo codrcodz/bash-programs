@@ -19,6 +19,7 @@ pipeline {
                 
                 // Test program's ability to parse CLI options and return expected results.
                 echo "Testing.."
+                // bashtest is pre-installed on Jenkins master node.
                 sh "bashtest ./test/digit-test.bashtest"
                 sh "bashtest ./test/alpha-test.bashtest"
             }
