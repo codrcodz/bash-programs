@@ -8,7 +8,11 @@
 # Special thanks to Chris for helping me shrink down the case statement.
 
 # The program takes your four digit phone extension as an argument in the $1 position when invoked from the command line.
-extension=$1
+extension=${1//[^0-9]/}
+if [[ "${#extension}" != "4" ]]; then
+	echo "Invalid Input; enter the last four digits of your phone number."
+	exit 1
+fi	
 
 # The extension is then carved up into four pieces, each in it's own spot within the "position" array.
 position_=( ${extension:0:1} ${extension:1:1} ${extension:2:1} ${extension:3:1} )
@@ -19,8 +23,8 @@ ltr_set_=( 0 1 a:b:c d:e:f g:h:i j:k:l m:n:o p:q:r:s t:u:v w:x:y:z )
 # In this loop, each number stored in the "position_" array is passed to a case evaluation.
 for digit in ${position_[*]}
 	do 
-    		# The case eval looks at the digit and decides if it has cooresponding letters (0 & 1 do not).
-    		# If the digit is 2-9, the associated letters are added to the "/" delimited "ltr_stack" variable.
+    	# The case eval looks at the digit and decides if it has cooresponding letters (0 & 1 do not).
+    	# If the digit is 2-9, the associated letters are added to the "/" delimited "ltr_stack" variable.
 		case $digit in
 			[0-1])
 				echo "Extension character $digit invalid; exiting."
