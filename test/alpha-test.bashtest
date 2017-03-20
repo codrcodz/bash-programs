@@ -1,2 +1,2 @@
-$ ./namer.sh abcd
+$ ./namer.bash abcd
 Extension character a invalid; exiting.
