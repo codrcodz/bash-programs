@@ -18,7 +18,7 @@ pipeline {
 
                 echo "Preparing test environment..."
                 sh "chmod u+x ./namer.sh"
-                sh 'which bashtest || easy_install bashtest'
+                sh 'easy_install bashtest || true'
 
                 echo "Testing.."
                 sh "bashtest ./test/digit-test.bashtest"
