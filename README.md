@@ -25,7 +25,7 @@ adik
 adil
 aegj
 ```
-You can also pipe to a file or the column utility to get nicer output. Have fun!
+You can also pipe to a file or the `column` utility to get nicer output. Have fun!
 
 
 
