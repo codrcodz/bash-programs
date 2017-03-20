@@ -1,4 +1,4 @@
-$ ./namer.sh 2345
+$ ./namer.bash 2345
 adgj
 adgk
 adgl
